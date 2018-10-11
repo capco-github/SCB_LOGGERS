@@ -27,6 +27,8 @@ public class Constants {
 		loggerNames.put("FitSense", "FitSense");
 		loggerNames.put("CallMeBack", "CallMeBack");
 		loggerNames.put("Feedback", "Feedback");
+		loggerNames.put("PolicyLoan", "PolicyLoan");
+		
 		
 		
 		

@@ -225,6 +225,20 @@
       		</rollingPolicy>
 		<prudent>true</prudent>
 	</appender>
+	<appender name="PolicyLoan"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<append>true</append>
+		<file>${APPLICATION_HOME}/PolicyLoan.log</file><!-- addd respective application 
+			name -->
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>%date{dd MMM yyyy;HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
+		</layout>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+		<fileNamePattern>${APPLICATION_HOME}/PolicyLoan.%d{yyyy-MM-dd}.log</fileNamePattern>
+		<totalSizeCap>2GB</totalSizeCap>
+      		</rollingPolicy>
+		<prudent>true</prudent>
+	</appender>
 	<appender name="GeneralApplication"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<append>true</append>
@@ -359,5 +373,8 @@
 	</logger>
 	<logger name="Feedback" level="info">
 		<appender-ref ref="Feedback" />
+	</logger>
+	<logger name="PolicyLoan" level="info">
+		<appender-ref ref="PolicyLoan" />
 	</logger>
 </configuration> 
