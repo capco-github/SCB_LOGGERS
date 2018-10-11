@@ -33,6 +33,8 @@ public class ApplicationLogs implements SCBLogger{
 		this.logger.warn(classname+" "+"message -"+info);
 	}
 	
+	
+	
 	public void infoLog(String info,Object object) {
 		logger.info(classname+" "+"message -"+info, object);		
 	}
